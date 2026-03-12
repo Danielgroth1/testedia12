@@ -1,0 +1,4 @@
+Segurança:
+
+As senhas precisam conter carácteres especiais.
+Necessário autenticador para acessar o super usuário do sistema.
