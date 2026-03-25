@@ -36,3 +36,23 @@ function listarCliente() {
 exibirTitulo();
 cadastrarCliente("João Silva", "joao@email.com", "(11) 99999-8888");
 listarCliente();
+
+let altura 6
+let largura 4
+let area = altura * largura
+console.log ("A área do retângulo é: " + area);
+
+
+let num1 = 10
+let num2 = 5
+console.log (num1 > num2);
+console.log (num1 < num2);
+console.log (num1 == num2);
+console.log (num1 != num2); 
+
+
+
+
+
+
+
