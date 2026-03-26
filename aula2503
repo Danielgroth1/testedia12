@@ -14,3 +14,18 @@ console.log (num1 != num2);
 let celsius = 25
 let fahrenheit = (celsius * 9/5) + 32
 console.log (celsius + "°C é igual a " + fahrenheit + "°F");   
+
+let nota1 = 7
+let nota2 = 8
+let nota3 = 9
+let media = (nota1 + nota2 + nota3) / 3
+console.log ("A média das notas é: " + media);
+
+let real = 100
+let dolar = real * 0.20
+console.log (real + " reais é igual a " + dolar + " dólares");
+
+let valor1 = 10
+let desconto = 0.15
+let valorComDesconto = valor1 - (valor1 * desconto)
+console.log ("O valor com desconto é: " + valorComDesconto);
