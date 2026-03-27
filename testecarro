@@ -1,0 +1,44 @@
+const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+const carros = {
+  gol: {
+    marca: "Volkswagen",
+    motor: "1.0",
+    ano: 2020
+  },
+  civic: {
+    marca: "Honda",
+    motor: "2.0",
+    ano: 2022
+  },
+  corolla: {
+    marca: "Toyota",
+    motor: "2.0",
+    ano: 2023
+  },
+  hb20: {
+    marca: "Hyundai",
+    motor: "1.0",
+    ano: 2021
+  }
+};
+
+rl.question("Digite o modelo do carro: ", (modelo) => {
+  modelo = modelo.toLowerCase();
+
+  if (carros[modelo]) {
+    console.log("\n=== INFORMAÇÕES ===");
+    console.log("Marca:", carros[modelo].marca);
+    console.log("Motor:", carros[modelo].motor);
+    console.log("Ano:", carros[modelo].ano);
+  } else {
+    console.log("Modelo não encontrado!");
+  }
+
+  rl.close();
+});
