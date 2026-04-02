@@ -1,41 +1,16 @@
-const rl = require("readline").createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
+let temperatura = 25;
+let novaTemperatura = 5;
+let opcao = 1;
 
-let temperatura = 26;
-
-console.log("1-Aumentar | 2-Diminuir | 3-Mostrar | 4-Sair");
-
-rl.question("Opção: ", function(op) {
-
-    switch (op) {
-        case "1":
-            temperatura++;
-            console.log("Temp:", temperatura);
-            break;
-
-        case "2":
-            temperatura--;
-            console.log("Temp:", temperatura);
-            break;
-
-        case "3":
-            console.log("Temp:", temperatura);
-            break;
-
-        case "4":
-            console.log("Final:", temperatura);
-            rl.close();
-            return;
-
-        default:
-            console.log("Inválido");
-    }
-
-    if (temperatura < 15 || temperatura > 30) {
-        console.log("⚠️ RISCO!");
-    }
-
-    rl.close();
-});
+switch (opcao) {
+    case 1:
+        temperatura += novaTemperatura;
+        console.log("Temperatura aumentada para: " + temperatura + "°C");
+        break;  
+    case 2:
+        temperatura -= novaTemperatura;
+        console.log("Temperatura diminuída para: " + temperatura + "°C");
+        break;  
+    case 3:
+        console.log("Temperatura atual: " + temperatura + "°C");
+        break;
