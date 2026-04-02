@@ -9,28 +9,32 @@ console.log("1-Aumentar | 2-Diminuir | 3-Mostrar | 4-Sair");
 
 rl.question("Opção: ", function(op) {
 
-    if (op == 1) {
-        temperatura++;
-        console.log("Temp:", temperatura);
-    } 
-    else if (op == 2) {
-        temperatura--;
-        console.log("Temp:", temperatura);
-    } 
-    else if (op == 3) {
-        console.log("Temp:", temperatura);
-    } 
-    else if (op == 4) {
-        console.log("Final:", temperatura);
-        rl.close();
-        return;
-    } 
-    else {
-        console.log("Inválido");
+    switch (op) {
+        case "1":
+            temperatura++;
+            console.log("Temp:", temperatura);
+            break;
+
+        case "2":
+            temperatura--;
+            console.log("Temp:", temperatura);
+            break;
+
+        case "3":
+            console.log("Temp:", temperatura);
+            break;
+
+        case "4":
+            console.log("Final:", temperatura);
+            rl.close();
+            return;
+
+        default:
+            console.log("Inválido");
     }
 
     if (temperatura < 15 || temperatura > 30) {
-        console.log("RISCO!");
+        console.log("⚠️ RISCO!");
     }
 
     rl.close();
