@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title>Exemplo</title>
+    <script>
+      const texto = document.getElementById("meuInput").value;
+      function processar() {
+  const valor = document.getElementById("meuInput").value;
+  document.getElementById("resultado").innerHTML = valor;
+      console.log("Olá mundo!");
+      document.getElementById("resultado").innerHTML = 
+  "Olá " + document.getElementById("meuInput").value + "!";
+      }
+    </script>
+  </head>
+  <body>
+    <input id="meuInput" type="text">
+    <button id="meuBotao" onclick="processar()">Clique Aqui</button>
+    <div id="resultado">O resultado aparecerá aqui</div>
+  </body>
+</html>
+
+
+

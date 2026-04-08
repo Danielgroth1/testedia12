@@ -1,0 +1,25 @@
+<html lang="pt-BR">
+<head>
+    <title>Calculadora</title>
+</head>
+<body>
+  <input id="num1" type="number" placeholder="Número 1">
+  <input id="num2" type="number" placeholder="Número 2">
+  <button onclick="somar()">Somar</button>
+    <div id="resultado"></div>
+    <script>
+    function somar() {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+      
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("resultado").innerHTML = 
+          "Por favor, digite números válidos.";
+      } else {
+        document.getElementById("resultado").innerHTML = 
+          "Resultado: " + (n1 + n2);
+      }
+    }
+    </script>
+</body>
+</html>
