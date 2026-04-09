@@ -3,9 +3,12 @@
     <title>Calculadora</title>
 </head>
 <body>
-  <input id="num1" type="number" placeholder="Número 1">
-  <input id="num2" type="number" placeholder="Número 2">
+  <input id="num1" type="text" placeholder="Número 1">
+  <input id="num2" type="text" placeholder="Número 2">
   <button onclick="somar()">Somar</button>
+ <button onclick="subtrair()">Subtrair</button>
+ <button onclick="multiplicar()">Multiplicar</button>   
+ <button onclick="dividir()">Dividir</button>
     <div id="resultado"></div>
     <script>
     function somar() {
@@ -18,6 +21,45 @@
       } else {
         document.getElementById("resultado").innerHTML = 
           "Resultado: " + (n1 + n2);
+      }
+    }
+    function subtrair() {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+      
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("resultado").innerHTML = 
+          "Por favor, digite números válidos.";
+      } else {
+        document.getElementById("resultado").innerHTML = 
+          "Resultado: " + (n1 - n2);
+      }
+    }   
+    function multiplicar() {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+      
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("resultado").innerHTML = 
+          "Por favor, digite números válidos.";
+      } else {
+        document.getElementById("resultado").innerHTML = 
+          "Resultado: " + (n1 * n2);
+      }
+    }
+    function dividir() {
+      const n1 = parseFloat(document.getElementById("num1").value);
+      const n2 = parseFloat(document.getElementById("num2").value);
+      
+      if (isNaN(n1) || isNaN(n2)) {
+        document.getElementById("resultado").innerHTML = 
+          "Por favor, digite números válidos.";
+      } else if (n2 === 0) {
+        document.getElementById("resultado").innerHTML = 
+          "Erro: Divisão por zero não é permitida.";
+      } else {
+        document.getElementById("resultado").innerHTML = 
+          "Resultado: " + (n1 / n2);
       }
     }
     </script>
